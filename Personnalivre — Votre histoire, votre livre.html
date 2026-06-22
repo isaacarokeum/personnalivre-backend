@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)file:///C:/Users/ISHAQ/Downloads/Personnalivre%20%E2%80%94%20Votre%20histoire,%20votre%20livre.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personnalivre — Votre histoire, votre livre</title>
+<link href="./Personnalivre — Votre histoire, votre livre_files/css2" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --cream:#FDF8F2;--warm:#F5EDE0;--gold:#C8A96E;--gold-dark:#A07840;
+  --ink:#2C1810;--ink-soft:#5C4033;--ink-muted:#9C8070;--page:#FFFDF9;
+  --sage:#8FAF8A;--red:#C0392B;
+}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,248,242,0.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,169,110,0.2);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);}
+.logo span{color:var(--gold-dark);font-style:italic;}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{font-size:14px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--gold-dark);}
+.nav-cta{background:var(--ink);color:var(--cream);padding:9px 22px;border-radius:100px;font-weight:500;font-size:13px;cursor:pointer;border:none;font-family:'Inter',sans-serif;transition:background .2s;}
+.nav-cta:hover{background:var(--gold-dark);}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 2rem 60px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 40%,#F5EDE0 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 15% 80%,rgba(232,196,176,.5) 0%,transparent 50%);pointer-events:none;}
+.hero-content{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(200,169,110,.13);border:1px solid rgba(200,169,110,.35);border-radius:100px;padding:5px 14px;font-size:12px;font-weight:500;color:var(--gold-dark);letter-spacing:.5px;text-transform:uppercase;margin-bottom:1.5rem;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,56px);line-height:1.1;color:var(--ink);margin-bottom:1.25rem;}
+.hero-title em{color:var(--gold-dark);font-style:italic;}
+.hero-sub{font-size:17px;line-height:1.7;color:var(--ink-soft);margin-bottom:2rem;font-weight:300;}
+.hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;}
+.btn-primary{background:var(--ink);color:var(--cream);border:none;border-radius:100px;padding:15px 34px;font-size:15px;font-weight:500;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;}
+.btn-primary:hover{background:var(--gold-dark);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--ink-soft);border:1px solid rgba(92,64,51,.22);border-radius:100px;padding:15px 28px;font-size:15px;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-dark);}
+
+/* BOOK */
+.book-stage{display:flex;justify-content:center;align-items:center;position:relative;height:420px;}
+.book{width:200px;height:280px;position:relative;transform:perspective(600px) rotateY(-12deg);filter:drop-shadow(20px 20px 40px rgba(44,24,16,.18));transition:transform .4s ease;}
+.book:hover{transform:perspective(600px) rotateY(-5deg) scale(1.03);}
+.book-spine{position:absolute;left:0;top:0;bottom:0;width:20px;background:#6B2A1E;border-radius:4px 0 0 4px;}
+.book-cover{width:100%;height:100%;background:linear-gradient(135deg,#8B3A2A 0%,#C8605A 40%,#A04038 100%);border-radius:4px 12px 12px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 16px;position:relative;overflow:hidden;}
+.book-deco{position:absolute;top:12px;left:24px;right:12px;bottom:12px;border:1px solid rgba(255,255,255,.2);border-radius:6px;}
+.book-star{color:rgba(255,220,100,.85);font-size:18px;margin-bottom:8px;z-index:1;}
+.book-title-text{font-family:'Playfair Display',serif;color:#FFF8F0;font-size:18px;text-align:center;line-height:1.3;z-index:1;}
+.book-sub-text{color:rgba(255,248,240,.7);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-top:8px;z-index:1;}
+.float-badge{position:absolute;background:var(--page);border:1px solid rgba(200,169,110,.3);border-radius:12px;padding:10px 14px;box-shadow:0 4px 16px rgba(44,24,16,.09);}
+.badge-a{top:40px;right:-10px;}
+.badge-b{bottom:60px;left:-20px;}
+.badge-ico{font-size:18px;margin-bottom:2px;}
+.badge-lbl{font-weight:500;color:var(--ink);font-size:12px;}
+.badge-sub{color:var(--ink-muted);font-size:11px;}
+
+/* SECTIONS */
+.sec{padding:88px 2rem;}
+.sec-inner{max-width:1100px;margin:0 auto;}
+.sec-warm{background:var(--warm);}
+.sec-label{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);line-height:1.2;color:var(--ink);margin-bottom:.9rem;}
+.sec-sub{font-size:16px;color:var(--ink-soft);max-width:520px;line-height:1.7;font-weight:300;margin-bottom:2.5rem;}
+
+/* STEPS */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.step-card{background:var(--page);border:1px solid rgba(200,169,110,.18);border-radius:16px;padding:1.75rem 1.5rem;transition:transform .2s,box-shadow .2s;}
+.step-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(44,24,16,.07);}
+.step-num{font-family:'Playfair Display',serif;font-size:36px;color:rgba(200,169,110,.28);line-height:1;margin-bottom:12px;}
+.step-ico{font-size:26px;margin-bottom:10px;}
+.step-ttl{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:6px;}
+.step-dsc{font-size:13px;color:var(--ink-soft);line-height:1.6;font-weight:300;}
+
+/* TYPES */
+.types-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
+.type-card{background:var(--page);border-radius:20px;overflow:hidden;border:1px solid rgba(200,169,110,.2);transition:transform .2s;}
+.type-card:hover{transform:translateY(-4px);}
+.type-head{padding:2rem 2rem 1.5rem;}
+.th-roman{background:linear-gradient(135deg,#2C1810 0%,#5C3020 100%);}
+.th-enfant{background:linear-gradient(135deg,#4A7C59 0%,#7AB893 100%);}
+.type-emo{font-size:40px;margin-bottom:12px;}
+.type-name{font-family:'Playfair Display',serif;font-size:24px;color:white;margin-bottom:6px;}
+.type-age{display:inline-block;background:rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px;}
+.type-body{padding:1.5rem 2rem 2rem;}
+.type-desc{font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:1.25rem;font-weight:300;}
+.type-feats{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem;}
+.feat-tag{background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.25);color:var(--gold-dark);font-size:11px;font-weight:500;padding:4px 10px;border-radius:100px;}
+
+/* LIVRAISON */
+.del-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;}
+.del-card{background:var(--page);border:1px solid rgba(200,169,110,.2);border-radius:16px;padding:1.75rem;}
+.del-ico{font-size:30px;margin-bottom:12px;}
+.del-name{font-size:17px;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.del-time{font-size:14px;color:var(--gold-dark);font-weight:500;margin-bottom:8px;}
+.del-desc{font-size:13px;color:var(--ink-muted);line-height:1.6;}
+.del-price{font-size:20px;font-weight:600;color:var(--ink);margin-top:1rem;}
+.del-note{font-size:11px;color:var(--ink-muted);}
+.countries{display:flex;flex-wrap:wrap;gap:6px;margin-top:2.5rem;}
+.country-pill{background:var(--page);border:1px solid rgba(200,169,110,.25);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-soft);}
+
+/* FAQ */
+.faq-list{max-width:680px;margin:2.5rem auto 0;}
+.faq-item{border-bottom:1px solid rgba(200,169,110,.2);padding:1.2rem 0;cursor:pointer;}
+.faq-q{font-size:15px;font-weight:500;color:var(--ink);display:flex;justify-content:space-between;align-items:center;}
+.faq-arrow{color:var(--gold);font-size:18px;transition:transform .2s;flex-shrink:0;margin-left:12px;}
+.faq-a{font-size:14px;color:var(--ink-soft);line-height:1.7;padding-top:10px;display:none;font-weight:300;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-arrow{transform:rotate(45deg);}
+
+/* CTA */
+.cta-sec{background:var(--ink);padding:88px 2rem;text-align:center;position:relative;overflow:hidden;}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(200,169,110,.1) 0%,transparent 70%);pointer-events:none;}
+.cta-sec h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,50px);color:var(--cream);margin-bottom:1rem;position:relative;z-index:1;}
+.cta-sec h2 em{color:var(--gold);}
+.cta-sec p{font-size:17px;color:rgba(253,248,242,.6);max-width:440px;margin:0 auto 2.5rem;line-height:1.7;font-weight:300;position:relative;z-index:1;}
+.btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:100px;padding:16px 40px;font-size:16px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;position:relative;z-index:1;}
+.btn-gold:hover{background:#D4B47A;transform:translateY(-2px);}
+
+/* FOOTER */
+footer{background:#1A0E08;padding:3rem 2rem;text-align:center;}
+.foot-logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:1rem;}
+.foot-logo span{color:var(--gold);font-style:italic;}
+.foot-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.foot-links a{font-size:13px;color:rgba(253,248,242,.45);text-decoration:none;cursor:pointer;transition:color .2s;}
+.foot-links a:hover{color:var(--gold);}
+.foot-copy{font-size:12px;color:rgba(253,248,242,.25);}
+
+/* POPUPS FOOTER */
+.fp-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(44,24,16,.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1rem;}
+.fp-overlay.active{display:flex;animation:fadeIn .2s ease;}
+.fp-modal{background:var(--page);border-radius:20px;width:100%;max-width:640px;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 32px 80px rgba(44,24,16,.25);animation:popIn .25s cubic-bezier(.34,1.56,.64,1);}
+.fp-head{padding:1.5rem 1.75rem 1.25rem;border-bottom:1px solid rgba(200,169,110,.18);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.fp-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);}
+.fp-close{width:32px;height:32px;border-radius:50%;border:1px solid rgba(200,169,110,.3);background:none;cursor:pointer;font-size:18px;color:var(--ink-muted);display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.fp-close:hover{background:var(--warm);color:var(--ink);}
+.fp-body{flex:1;overflow-y:auto;padding:1.5rem 1.75rem 2rem;scrollbar-width:thin;scrollbar-color:var(--warm) transparent;}
+.fp-body h3{font-family:'Playfair Display',serif;font-size:16px;color:var(--ink);margin:1.5rem 0 .5rem;}
+.fp-body h3:first-child{margin-top:0;}
+.fp-body p{font-size:14px;color:var(--ink-soft);line-height:1.75;margin-bottom:.75rem;font-weight:300;}
+.fp-body ul{padding-left:1.25rem;margin-bottom:.75rem;}
+.fp-body ul li{font-size:14px;color:var(--ink-soft);line-height:1.75;font-weight:300;}
+.fp-body strong{color:var(--ink);font-weight:600;}
+.fp-tag{display:inline-block;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.25);color:var(--gold-dark);font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;margin-bottom:1rem;}
+
+/* CONTACT POPUP */
+.contact-email-block{background:var(--warm);border-radius:14px;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;margin:1.25rem 0;flex-wrap:wrap;gap:1rem;}
+.contact-email-addr{font-size:15px;font-weight:600;color:var(--ink);}
+.contact-email-sub{font-size:12px;color:var(--ink-muted);margin-top:2px;}
+.btn-contact{background:var(--ink);color:var(--cream);border:none;border-radius:100px;padding:11px 24px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;text-decoration:none;display:inline-block;}
+.btn-contact:hover{background:var(--gold-dark);}
+
+/* OVERLAY */
+.overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(44,24,16,.55);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1.5rem;overflow-y:auto;}
+.overlay.active{display:flex;animation:fadeIn .2s ease;}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+/* MODAL */
+.modal{background:var(--page);border-radius:24px;width:100%;max-width:600px;overflow:hidden;display:flex;flex-direction:column;animation:popIn .25s cubic-bezier(.34,1.56,.64,1);box-shadow:0 32px 80px rgba(44,24,16,.25);margin:auto;}
+@keyframes popIn{from{opacity:0;transform:scale(.92) translateY(16px);}to{opacity:1;transform:scale(1) translateY(0);}}
+
+.m-head{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid rgba(200,169,110,.18);flex-shrink:0;}
+.m-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;}
+.m-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);}
+.m-logo span{color:var(--gold-dark);font-style:italic;}
+.m-close{width:32px;height:32px;border-radius:50%;border:1px solid rgba(200,169,110,.3);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink-muted);transition:all .15s;}
+.m-close:hover{background:var(--warm);color:var(--ink);}
+.prog-track{display:flex;gap:4px;}
+.prog-seg{flex:1;height:3px;background:rgba(200,169,110,.2);border-radius:10px;transition:background .3s;}
+.prog-seg.done{background:var(--gold);}
+.prog-seg.active{background:var(--gold-dark);}
+.prog-lbl{font-size:11px;color:var(--ink-muted);margin-top:8px;}
+
+.m-body{overflow-y:auto;padding:1.5rem 1.75rem;scrollbar-width:thin;scrollbar-color:var(--warm) transparent;max-height:60vh;}
+.mstep{display:none;}
+.mstep.active{display:block;animation:sIn .22s ease;}
+@keyframes sIn{from{opacity:0;transform:translateX(14px);}to{opacity:1;transform:translateX(0);}}
+.st-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);margin-bottom:6px;}
+.st-sub{font-size:13px;color:var(--ink-muted);margin-bottom:1.4rem;line-height:1.6;}
+
+/* CHOICE CARDS */
+.choices{display:grid;gap:10px;}
+.ch-card{border:1.5px solid rgba(200,169,110,.25);border-radius:14px;padding:14px 16px;cursor:pointer;transition:all .18s;background:white;display:flex;align-items:center;gap:12px;user-select:none;}
+.ch-card:hover{border-color:var(--gold);background:#FFFBF5;}
+.ch-card.sel{border-color:var(--gold-dark);background:linear-gradient(135deg,#FFFBF0,#FDF5E0);box-shadow:0 0 0 3px rgba(200,169,110,.13);}
+.ch-ico{font-size:26px;flex-shrink:0;}
+.ch-lbl{font-size:14px;font-weight:500;color:var(--ink);}
+.ch-dsc{font-size:12px;color:var(--ink-muted);margin-top:2px;}
+.ch-chk{display:none!important;}
+
+
+/* THEMES */
+.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.th-card{border:1.5px solid rgba(200,169,110,.22);border-radius:12px;padding:14px 10px;text-align:center;cursor:pointer;transition:all .18s;background:white;user-select:none;}
+.th-card:hover{border-color:var(--gold);background:#FFFBF5;}
+.th-card.sel{border-color:var(--gold-dark);background:linear-gradient(135deg,#FFFBF0,#FDF5E0);box-shadow:0 0 0 3px rgba(200,169,110,.1);}
+.th-emo{font-size:28px;margin-bottom:6px;}
+.th-nm{font-size:12px;font-weight:500;color:var(--ink);}
+
+/* PERSONNAGES */
+.perso-slots{display:flex;flex-direction:column;gap:10px;}
+.perso-slot{display:flex;align-items:center;gap:10px;}
+.perso-num{width:28px;height:28px;border-radius:50%;background:var(--warm);border:1px solid rgba(200,169,110,.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--gold-dark);flex-shrink:0;}
+.perso-input{flex:1;padding:10px 14px;border:1.5px solid rgba(200,169,110,.25);border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;color:var(--ink);background:white;outline:none;transition:border-color .18s;}
+.perso-input:focus{border-color:var(--gold-dark);}
+.perso-input::placeholder{color:var(--ink-muted);}
+.perso-badge{font-size:11px;font-weight:600;padding:3px 8px;border-radius:100px;white-space:nowrap;}
+.pb-free{background:rgba(143,175,138,.2);color:#5A8A55;}
+.pb-paid{background:rgba(200,169,110,.2);color:var(--gold-dark);}
+.perso-rm{background:none;border:none;cursor:pointer;font-size:16px;color:var(--ink-muted);padding:4px;transition:color .15s;flex-shrink:0;}
+.perso-rm:hover{color:var(--red);}
+.perso-add{border:1.5px dashed rgba(200,169,110,.4);border-radius:10px;padding:10px;background:none;cursor:pointer;font-size:13px;color:var(--gold-dark);font-family:'Inter',sans-serif;transition:all .18s;width:100%;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;}
+.perso-add:hover{background:rgba(200,169,110,.08);border-color:var(--gold);}
+.perso-note{font-size:12px;color:var(--gold-dark);font-weight:500;margin-top:8px;text-align:right;}
+
+/* HISTOIRE */
+.hist-choice{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem;}
+.hist-card{border:1.5px solid rgba(200,169,110,.22);border-radius:14px;padding:16px;text-align:center;cursor:pointer;background:white;transition:all .18s;user-select:none;}
+.hist-card:hover{border-color:var(--gold);background:#FFFBF5;}
+.hist-card.sel{border-color:var(--gold-dark);background:linear-gradient(135deg,#FFFBF0,#FDF5E0);}
+.hist-ico{font-size:28px;margin-bottom:8px;}
+.hist-lbl{font-size:13px;font-weight:500;color:var(--ink);}
+.hist-sub{font-size:11px;color:var(--ink-muted);margin-top:3px;}
+.hist-ta{width:100%;padding:12px 14px;border:1.5px solid rgba(200,169,110,.3);border-radius:12px;font-size:14px;font-family:'Inter',sans-serif;color:var(--ink);background:white;resize:vertical;min-height:100px;outline:none;line-height:1.6;transition:border-color .18s;display:none;}
+.hist-ta.vis{display:block;}
+.hist-ta:focus{border-color:var(--gold-dark);}
+
+/* PAGES */
+.pages-disp{text-align:center;margin-bottom:1.5rem;}
+.pages-num{font-family:'Playfair Display',serif;font-size:56px;color:var(--ink);line-height:1;}
+.pages-lbl{font-size:13px;color:var(--ink-muted);margin-top:4px;}
+.pages-slider{width:100%;-webkit-appearance:none;height:4px;background:rgba(200,169,110,.25);border-radius:10px;outline:none;cursor:pointer;}
+.pages-slider::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold-dark);cursor:pointer;border:3px solid white;box-shadow:0 2px 8px rgba(160,120,64,.4);}
+.pages-marks{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--ink-muted);}
+
+/* FORMAT */
+.fmt-cards{display:flex;flex-direction:column;gap:10px;}
+.fmt-card{border:1.5px solid rgba(200,169,110,.22);border-radius:14px;padding:16px 18px;cursor:pointer;background:white;display:flex;align-items:center;gap:14px;transition:all .18s;user-select:none;}
+.fmt-card:hover{border-color:var(--gold);background:#FFFBF5;}
+.fmt-card.sel{border-color:var(--gold-dark);background:linear-gradient(135deg,#FFFBF0,#FDF5E0);box-shadow:0 0 0 3px rgba(200,169,110,.12);}
+.fmt-ico{font-size:30px;flex-shrink:0;}
+.fmt-info{flex:1;}
+.fmt-name{font-size:15px;font-weight:500;color:var(--ink);}
+.fmt-desc{font-size:12px;color:var(--ink-muted);margin-top:2px;}
+
+/* LIVRAISON CARDS */
+.lv-cards{display:flex;flex-direction:column;gap:10px;margin-top:1.25rem;}
+.lv-card{border:1.5px solid rgba(200,169,110,.22);border-radius:14px;padding:14px 18px;cursor:pointer;background:white;display:flex;align-items:center;gap:14px;transition:all .18s;user-select:none;}
+.lv-card:hover{border-color:var(--gold);background:#FFFBF5;}
+.lv-card.sel{border-color:var(--gold-dark);background:linear-gradient(135deg,#FFFBF0,#FDF5E0);box-shadow:0 0 0 3px rgba(200,169,110,.12);}
+.lv-ico{font-size:26px;flex-shrink:0;}
+.lv-info{flex:1;}
+.lv-name{font-size:14px;font-weight:500;color:var(--ink);}
+.lv-time{font-size:12px;color:var(--ink-muted);margin-top:2px;}
+.lv-price{font-size:15px;font-weight:600;color:var(--gold-dark);font-family:'Playfair Display',serif;}
+.country-sel{width:100%;padding:12px 14px;border:1.5px solid rgba(200,169,110,.25);border-radius:12px;font-size:14px;font-family:'Inter',sans-serif;color:var(--ink);background:white;outline:none;cursor:pointer;transition:border-color .18s;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239C8070' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;margin-top:1rem;}
+.country-sel:focus{border-color:var(--gold-dark);}
+
+/* TÉLÉPHONE */
+.phone-wrap{display:flex;gap:8px;}
+.phone-code{padding:10px 12px;border:1.5px solid rgba(200,169,110,.25);border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;color:var(--ink);background:white;outline:none;cursor:pointer;transition:border-color .18s;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%239C8070' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;padding-right:26px;flex-shrink:0;min-width:96px;}
+.phone-code:focus{border-color:var(--gold-dark);}
+.phone-num{flex:1;padding:10px 14px;border:1.5px solid rgba(200,169,110,.25);border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;color:var(--ink);background:white;outline:none;transition:border-color .18s;}
+.phone-num:focus{border-color:var(--gold-dark);}
+.phone-num::placeholder{color:var(--ink-muted);}
+.wa-note{font-size:12px;color:var(--ink-muted);margin-top:6px;display:flex;align-items:center;gap:5px;}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.fg{display:flex;flex-direction:column;gap:5px;}
+.fg.full{grid-column:1/-1;}
+.fg-lbl{font-size:12px;font-weight:500;color:var(--ink-soft);}
+.fg-input{padding:11px 14px;border:1.5px solid rgba(200,169,110,.25);border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;color:var(--ink);background:white;outline:none;transition:border-color .18s;}
+.fg-input:focus{border-color:var(--gold-dark);}
+.fg-input::placeholder{color:var(--ink-muted);}
+.fg-err{font-size:11px;color:var(--red);display:none;}
+.fg.err .fg-input{border-color:var(--red);}
+.fg.err .fg-err{display:block;}
+
+/* PHOTOS */
+.photo-zone{border:2px dashed rgba(200,169,110,.35);border-radius:14px;padding:2rem;text-align:center;cursor:pointer;transition:all .2s;background:white;}
+.photo-zone:hover{border-color:var(--gold);background:#FFFBF5;}
+.photo-ico{font-size:36px;margin-bottom:10px;}
+.photo-lbl{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:4px;}
+.photo-sub{font-size:12px;color:var(--ink-muted);}
+.photo-previews{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:1rem;}
+.photo-thumb{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;border:1px solid rgba(200,169,110,.2);}
+.photo-thumb img{width:100%;height:100%;object-fit:cover;}
+.photo-thumb button{position:absolute;top:4px;right:4px;background:rgba(44,24,16,.6);color:white;border:none;border-radius:50%;width:20px;height:20px;font-size:11px;cursor:pointer;}
+.photo-note{font-size:12px;color:var(--ink-muted);margin-top:10px;line-height:1.5;}
+
+/* RECAP */
+.recap-box{background:var(--warm);border-radius:16px;padding:1.25rem 1.5rem;margin-bottom:1.25rem;}
+.recap-ttl{font-size:12px;font-weight:600;color:var(--gold-dark);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.recap-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;font-size:13px;border-bottom:1px solid rgba(200,169,110,.15);}
+.recap-row:last-child{border-bottom:none;}
+.recap-k{color:var(--ink-muted);}
+.recap-v{font-weight:500;color:var(--ink);text-align:right;max-width:60%;}
+.recap-sep{border:none;border-top:1px solid rgba(200,169,110,.2);margin:6px 0;}
+.total-block{background:var(--ink);border-radius:14px;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;}
+.total-lbl{font-size:14px;font-weight:500;color:rgba(253,248,242,.75);}
+.total-price{font-family:'Playfair Display',serif;font-size:32px;color:var(--cream);}
+.btn-payer{width:100%;background:var(--gold);color:var(--ink);border:none;border-radius:12px;padding:16px;font-size:16px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;letter-spacing:.2px;}
+.btn-payer:hover{background:#D4B47A;transform:translateY(-1px);}
+
+/* MODAL FOOTER */
+.m-foot{padding:1rem 1.75rem 1.5rem;border-top:1px solid rgba(200,169,110,.18);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:10px;}
+.btn-back{background:none;border:1.5px solid rgba(200,169,110,.3);border-radius:100px;padding:10px 22px;font-size:14px;color:var(--ink-soft);cursor:pointer;font-family:'Inter',sans-serif;transition:all .18s;}
+.btn-back:hover{border-color:var(--gold);color:var(--gold-dark);}
+.btn-next{background:var(--ink);color:var(--cream);border:none;border-radius:100px;padding:12px 28px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;transition:all .18s;}
+.btn-next:hover{background:var(--gold-dark);}
+.step-ctr{font-size:12px;color:var(--ink-muted);}
+
+@media(max-width:768px){
+  .hero-content{grid-template-columns:1fr;}
+  .book-stage{height:260px;}
+  .steps-grid{grid-template-columns:1fr 1fr;}
+  .types-grid,.del-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .form-grid{grid-template-columns:1fr;}
+}
+</style>
+<script src="./Personnalivre — Votre histoire, votre livre_files/email.min.js.téléchargement"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Personna<span>livre</span></div>
+  <div class="nav-links">
+    <a href="file:///C:/Users/ISHAQ/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/8aee6000-b3da-4b2c-9f97-b9858352f4f0/794689db-5a97-498f-b795-90798804d4bf/local_ae5f2c50-bac8-4d58-a4d3-d32812acdae8/outputs/personnalivre_6_7.html#comment">Comment ça marche</a>
+    <a href="file:///C:/Users/ISHAQ/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/8aee6000-b3da-4b2c-9f97-b9858352f4f0/794689db-5a97-498f-b795-90798804d4bf/local_ae5f2c50-bac8-4d58-a4d3-d32812acdae8/outputs/personnalivre_6_7.html#livres">Nos livres</a>
+    <a href="file:///C:/Users/ISHAQ/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/8aee6000-b3da-4b2c-9f97-b9858352f4f0/794689db-5a97-498f-b795-90798804d4bf/local_ae5f2c50-bac8-4d58-a4d3-d32812acdae8/outputs/personnalivre_6_7.html#livraison">Livraison</a>
+    <a href="file:///C:/Users/ISHAQ/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/8aee6000-b3da-4b2c-9f97-b9858352f4f0/794689db-5a97-498f-b795-90798804d4bf/local_ae5f2c50-bac8-4d58-a4d3-d32812acdae8/outputs/personnalivre_6_7.html#faq">FAQ</a>
+    <button class="nav-cta" onclick="openModal()">Créer mon livre →</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow">✦ Livres personnalisés</div>
+      <h1 class="hero-title">Votre histoire,<br><em>votre livre.</em></h1>
+      <p class="hero-sub">Un roman ou un livre illustré unique, créé sur mesure avec vos personnages et votre univers. Livré chez vous ou en PDF.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="openModal()">Créer mon livre →</button>
+        <button class="btn-ghost" onclick="document.getElementById(&#39;comment&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Comment ça marche</button>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px;">Nos tarifs</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <div style="background:var(--page);border:1px solid rgba(200,169,110,.3);border-radius:12px;padding:10px 16px;display:flex;flex-direction:column;gap:2px;">
+            <span style="font-size:11px;color:var(--ink-muted);">PDF · Roman</span>
+            <span style="font-family:&#39;Playfair Display&#39;,serif;font-size:20px;color:var(--ink);font-weight:700;">7,99€</span>
+          </div>
+          <div style="background:var(--page);border:1px solid rgba(200,169,110,.3);border-radius:12px;padding:10px 16px;display:flex;flex-direction:column;gap:2px;">
+            <span style="font-size:11px;color:var(--ink-muted);">PDF · Livre enfant</span>
+            <span style="font-family:&#39;Playfair Display&#39;,serif;font-size:20px;color:var(--ink);font-weight:700;">12,99€</span>
+          </div>
+          <div style="background:var(--page);border:1px solid rgba(200,169,110,.3);border-radius:12px;padding:10px 16px;display:flex;flex-direction:column;gap:2px;">
+            <span style="font-size:11px;color:var(--ink-muted);">Physique · Roman</span>
+            <span style="font-family:&#39;Playfair Display&#39;,serif;font-size:20px;color:var(--ink);font-weight:700;">dès 19,99€</span>
+          </div>
+          <div style="background:var(--page);border:1px solid rgba(200,169,110,.3);border-radius:12px;padding:10px 16px;display:flex;flex-direction:column;gap:2px;">
+            <span style="font-size:11px;color:var(--ink-muted);">Physique · Livre enfant</span>
+            <span style="font-family:&#39;Playfair Display&#39;,serif;font-size:20px;color:var(--ink);font-weight:700;">39,99€</span>
+          </div>
+        </div>
+        <div style="margin-top:8px;font-size:11px;color:var(--ink-muted);">Les prix varient selon le type de livre et le nombre de pages.</div>
+      </div>
+    </div>
+    <div class="book-stage">
+      <div class="book">
+        <div class="book-spine"></div>
+        <div class="book-cover">
+          <div class="book-deco"></div>
+          <div class="book-star">★</div>
+          <div class="book-title-text">L'Aventure<br>de Lucas</div>
+          <div class="book-sub-text">Une histoire unique</div>
+        </div>
+      </div>
+      <div class="float-badge badge-a"><div class="badge-ico">✍️</div><div class="badge-lbl">Créé pour vous</div><div class="badge-sub">histoire unique</div></div>
+      <div class="float-badge badge-b"><div class="badge-ico">📦</div><div class="badge-lbl">Livré chez vous</div><div class="badge-sub">7 pays disponibles</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT ÇA MARCHE -->
+<section class="sec" id="comment">
+  <div class="sec-inner">
+    <div class="sec-label">Le processus</div>
+    <h2 class="sec-title">Simple comme une belle histoire</h2>
+    <p class="sec-sub">Quatre étapes pour tenir votre livre entre les mains.</p>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-num">01</div><div class="step-ico">✍️</div><div class="step-ttl">Vous personnalisez</div><div class="step-dsc">Âge, thème, personnages, pages et format — tout se fait en quelques clics.</div></div>
+      <div class="step-card"><div class="step-num">02</div><div class="step-ico">💳</div><div class="step-ttl">Vous payez</div><div class="step-dsc">Paiement sécurisé. Confirmation reçue immédiatement.</div></div>
+      <div class="step-card"><div class="step-num">03</div><div class="step-ico">📖</div><div class="step-ttl">On crée votre livre</div><div class="step-dsc">Nous rédigeons et illustrons votre livre sur mesure avec nos outils.</div></div>
+      <div class="step-card"><div class="step-num">04</div><div class="step-ico">🚀</div><div class="step-ttl">Vous recevez</div><div class="step-dsc">PDF par email ou livre imprimé livré directement à votre adresse.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES -->
+<section class="sec sec-warm" id="livres">
+  <div class="sec-inner">
+    <div class="sec-label">Nos collections</div>
+    <h2 class="sec-title">Deux types de livres</h2>
+    <p class="sec-sub">Un roman pour les grands ou un livre illustré pour les tout-petits.</p>
+    <div class="types-grid">
+      <div class="type-card">
+        <div class="type-head th-roman"><div class="type-emo">📚</div><div class="type-name">Roman personnalisé</div><span class="type-age">7 ans → adulte</span></div>
+        <div class="type-body"><p class="type-desc">Un vrai roman broché collé comme en librairie, avec vos personnages, votre univers, votre histoire. Format poche, couverture matte, papier crème.</p><div class="type-feats"><span class="feat-tag">20 à 200 pages</span><span class="feat-tag">Jusqu'à 8 personnages</span><span class="feat-tag">Texte noir</span><span class="feat-tag">Broché collé</span></div></div>
+      </div>
+      <div class="type-card">
+        <div class="type-head th-enfant"><div class="type-emo">🎨</div><div class="type-name">Livre illustré enfant</div><span class="type-age">Moins de 7 ans</span></div>
+        <div class="type-body"><p class="type-desc">Des illustrations colorées style dessin animé avec les visages de votre enfant et ses amis. Un livre dont il sera le héros !</p><div class="type-feats"><span class="feat-tag">20 à 32 pages</span><span class="feat-tag">Jusqu'à 8 personnages</span><span class="feat-tag">Couleur pleine page</span><span class="feat-tag">Photos personnalisées</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVRAISON -->
+<section class="sec" id="livraison">
+  <div class="sec-inner">
+    <div class="sec-label">Livraison</div>
+    <h2 class="sec-title">Livraison incluse dans 7 pays</h2>
+    <p class="sec-sub">L'impression prend 3 à 5 jours ouvrés, puis votre livre part chez vous.</p>
+    <div class="del-grid" style="grid-template-columns:1fr;">
+      <div class="del-card"><div class="del-ico">📦</div><div class="del-name">Livraison standard</div><div class="del-time">~14 jours au total</div><div class="del-desc">Impression 3-5j + livraison internationale incluse dans le prix du livre.</div><div class="del-price">12€ inclus</div><div class="del-note">Livraison incluse dans les 7 pays disponibles</div></div>
+    </div>
+    <div class="countries">
+      <div class="country-pill">🇲🇦 Maroc</div><div class="country-pill">🇫🇷 France</div><div class="country-pill">🇨🇭 Suisse</div><div class="country-pill">🇬🇧 Royaume-Uni</div><div class="country-pill">🇺🇸 États-Unis</div><div class="country-pill">🇩🇪 Allemagne</div><div class="country-pill">🇪🇸 Espagne</div><div class="country-pill">✉️ Autre pays → nous contacter</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-warm" id="faq">
+  <div class="sec-inner" style="text-align:center">
+    <div class="sec-label">Questions fréquentes</div>
+    <h2 class="sec-title">Tout ce que vous voulez savoir</h2>
+    <div class="faq-list" style="text-align:left">
+      <div class="faq-item" onclick="this.classList.toggle(&#39;open&#39;)"><div class="faq-q">Comment fonctionne la personnalisation ? <span class="faq-arrow">+</span></div><div class="faq-a">Vous remplissez un formulaire : âge, thème, personnages, histoire. Nous créons votre livre sur mesure avec nos outils. Jusqu'à 8 personnages, tous inclus dans le prix.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle(&#39;open&#39;)"><div class="faq-q">Combien de temps pour recevoir mon livre ? <span class="faq-arrow">+</span></div><div class="faq-a">L'impression prend 3 à 5 jours ouvrés. Ensuite comptez 7-14 jours en standard ou 3-5 jours en express. Soit environ 2 semaines ou 1 semaine selon votre choix.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle(&#39;open&#39;)"><div class="faq-q">Puis-je avoir juste un PDF ? <span class="faq-arrow">+</span></div><div class="faq-a">Oui ! Le PDF est disponible pour tous les types de livres. Vous le recevez par email dès que votre livre est créé.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle(&#39;open&#39;)"><div class="faq-q">Le livre illustré enfant, comment ça marche avec les photos ? <span class="faq-arrow">+</span></div><div class="faq-a">Lors de la commande, vous envoyez les photos de votre enfant et de ses amis. Nous créons des illustrations style dessin animé avec leurs visages.</div></div>
+      <div class="faq-item" onclick="this.classList.toggle(&#39;open&#39;)"><div class="faq-q">Quelles langues sont disponibles ? <span class="faq-arrow">+</span></div><div class="faq-a">Personnalivre est disponible en français, anglais, espagnol et allemand. Votre livre peut être rédigé dans la langue de votre choix.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="cta-bg"></div>
+  <h2>Prêt à écrire <em>votre</em> histoire ?</h2>
+  <p>Un livre unique créé pour vous, livré où vous voulez.</p>
+  <button class="btn-gold" onclick="openModal()">Créer mon livre maintenant →</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">Personna<span>livre</span></div>
+  <div class="foot-links">
+    <a onclick="openFP(&#39;fp-apropos&#39;)">À propos</a>
+    <a onclick="openFP(&#39;fp-mentions&#39;)">Mentions légales</a>
+    <a onclick="openFP(&#39;fp-confidentialite&#39;)">Confidentialité</a>
+    <a onclick="openFP(&#39;fp-contact&#39;)">Contact</a>
+  </div>
+  <div class="foot-copy">© 2025 Personnalivre · Tous droits réservés</div>
+</footer>
+
+<!-- ══ POPUP À PROPOS ══ -->
+<div class="fp-overlay" id="fp-apropos" onclick="closeFPOverlay(event,&#39;fp-apropos&#39;)">
+  <div class="fp-modal">
+    <div class="fp-head">
+      <div class="fp-title">À propos de Personnalivre</div>
+      <button class="fp-close" onclick="closeFP(&#39;fp-apropos&#39;)">✕</button>
+    </div>
+    <div class="fp-body">
+      <div class="fp-tag">Notre concept</div>
+      <p>Personnalivre est un service de création de livres sur mesure. Chaque livre est unique, écrit spécialement pour vous avec vos personnages, votre thème et votre histoire.</p>
+      <h3>Notre mission</h3>
+      <p>Nous croyons que chaque personne mérite d'être le héros de sa propre histoire. Que ce soit pour un enfant qui découvre la lecture, un adolescent passionné d'aventure ou un adulte qui souhaite offrir un cadeau inoubliable, Personnalivre crée le livre qui vous ressemble.</p>
+      <h3>Comment nous travaillons</h3>
+      <p>Vous remplissez un formulaire en quelques minutes avec vos préférences. Notre équipe utilise ses propres outils pour rédiger et illustrer votre livre sur mesure. Nous travaillons avec Lulu, notre partenaire imprimeur, pour imprimer et livrer votre livre directement chez vous dans 7 pays.</p>
+      <h3>Nos engagements</h3>
+      <ul>
+        <li>Un livre 100% unique pour chaque commande</li>
+        <li>Contenu adapté à l'âge et au thème choisi</li>
+        <li>Impression de qualité professionnelle</li>
+        <li>Livraison standard ou express selon vos besoins</li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══ POPUP MENTIONS LÉGALES ══ -->
+<div class="fp-overlay" id="fp-mentions" onclick="closeFPOverlay(event,&#39;fp-mentions&#39;)">
+  <div class="fp-modal">
+    <div class="fp-head">
+      <div class="fp-title">Mentions légales</div>
+      <button class="fp-close" onclick="closeFP(&#39;fp-mentions&#39;)">✕</button>
+    </div>
+    <div class="fp-body">
+      <div class="fp-tag">Informations légales</div>
+      <h3>Éditeur du site</h3>
+      <p><strong>Personnalivre</strong><br>
+      Service de création de livres personnalisés<br>
+      Email : personnalivre@outlook.fr</p>
+      <h3>Hébergement</h3>
+      <p>Ce site est hébergé par un prestataire tiers. Les coordonnées de l'hébergeur sont disponibles sur simple demande.</p>
+      <h3>Propriété intellectuelle</h3>
+      <p>L'ensemble du contenu de ce site (textes, images, logos, graphismes) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable de Personnalivre.</p>
+      <p>Les livres créés sur commande appartiennent à leurs destinataires. Personnalivre conserve un droit de regard sur les contenus produits afin d'en assurer la qualité et la conformité aux présentes conditions.</p>
+      <h3>Responsabilité</h3>
+      <p>Personnalivre s'engage à créer des contenus adaptés à l'âge indiqué lors de la commande. Les contenus à caractère offensant, illégal ou contraire aux bonnes mœurs sont refusés. Personnalivre se réserve le droit de refuser toute commande ne respectant pas ces principes.</p>
+      <h3>Droit applicable</h3>
+      <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+      <h3>Contact</h3>
+      <p>Pour toute question d'ordre légal : <strong>personnalivre@outlook.fr</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ POPUP CONFIDENTIALITÉ ══ -->
+<div class="fp-overlay" id="fp-confidentialite" onclick="closeFPOverlay(event,&#39;fp-confidentialite&#39;)">
+  <div class="fp-modal">
+    <div class="fp-head">
+      <div class="fp-title">Politique de confidentialité</div>
+      <button class="fp-close" onclick="closeFP(&#39;fp-confidentialite&#39;)">✕</button>
+    </div>
+    <div class="fp-body">
+      <div class="fp-tag">Protection de vos données · RGPD</div>
+      <h3>Données collectées</h3>
+      <p>Lors d'une commande, nous collectons les informations suivantes :</p>
+      <ul>
+        <li>Nom et prénom</li>
+        <li>Adresse email</li>
+        <li>Numéro de téléphone WhatsApp</li>
+        <li>Adresse postale (si livraison physique)</li>
+        <li>Contenu de la commande (personnages, thème, histoire)</li>
+        <li>Photos envoyées (pour les livres illustrés enfant)</li>
+      </ul>
+      <h3>Finalité du traitement</h3>
+      <p>Vos données sont utilisées exclusivement pour :</p>
+      <ul>
+        <li>La création et la livraison de votre livre</li>
+        <li>La communication relative à votre commande</li>
+        <li>La transmission à notre partenaire imprimeur Lulu (adresse de livraison uniquement)</li>
+      </ul>
+      <h3>Conservation des données</h3>
+      <p>Vos données sont conservées pendant <strong>3 ans</strong> à compter de votre commande, conformément aux obligations légales françaises.</p>
+      <h3>Vos droits (RGPD)</h3>
+      <p>Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679), vous disposez des droits suivants :</p>
+      <ul>
+        <li><strong>Droit d'accès</strong> : connaître les données que nous détenons sur vous</li>
+        <li><strong>Droit de rectification</strong> : corriger des données inexactes</li>
+        <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+        <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format lisible</li>
+        <li><strong>Droit d'opposition</strong> : vous opposer à un traitement</li>
+      </ul>
+      <p>Pour exercer ces droits : <strong>personnalivre@outlook.fr</strong></p>
+      <h3>Sécurité</h3>
+      <p>Vos données sont stockées de manière sécurisée. Elles ne sont jamais revendues ni partagées à des tiers à des fins commerciales.</p>
+      <h3>Cookies</h3>
+      <p>Ce site n'utilise pas de cookies de traçage ou publicitaires. Seuls des cookies techniques strictement nécessaires au bon fonctionnement du site peuvent être utilisés.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ POPUP CONTACT ══ -->
+<div class="fp-overlay" id="fp-contact" onclick="closeFPOverlay(event,&#39;fp-contact&#39;)">
+  <div class="fp-modal">
+    <div class="fp-head">
+      <div class="fp-title">Nous contacter</div>
+      <button class="fp-close" onclick="closeFP(&#39;fp-contact&#39;)">✕</button>
+    </div>
+    <div class="fp-body">
+      <div class="fp-tag">On vous répond rapidement</div>
+      <p>Une question sur votre commande, une demande particulière ou simplement envie d'en savoir plus ? Écrivez-nous par email.</p>
+      <div class="contact-email-block">
+        <div>
+          <div class="contact-email-addr">personnalivre@outlook.fr</div>
+          <div class="contact-email-sub">Réponse sous 24h en jours ouvrés</div>
+        </div>
+        <a class="btn-contact" href="mailto:personnalivre@outlook.fr?subject=Demande%20Personnalivre">Contacter →</a>
+      </div>
+
+      <h3>Suivi de commande</h3>
+      <p>Pour toute question concernant une commande en cours, merci d'indiquer votre nom, prénom et l'email utilisé lors de la commande.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL ══ -->
+<div class="overlay" id="overlay" onclick="closeOnOverlay(event)">
+  <div class="modal">
+    <div class="m-head">
+      <div class="m-top">
+        <div class="m-logo">Personna<span>livre</span></div>
+        <button class="m-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="prog-track" id="progTrack"><div class="prog-seg active"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
+      <div class="prog-lbl" id="progLbl">Étape 1 sur 11</div>
+    </div>
+
+    <div class="m-body">
+
+      <!-- S1 TYPE -->
+      <div class="mstep active" id="s1">
+        <div class="st-title">Quel type de livre ?</div>
+        <div class="st-sub">Choisissez l'univers de votre histoire.</div>
+        <div class="choices">
+          <div class="ch-card" onclick="pick(this,&#39;type&#39;,&#39;roman&#39;)"><div class="ch-ico">📚</div><div><div class="ch-lbl">Roman personnalisé</div><div class="ch-dsc">7 ans → adulte · texte, format poche broché</div></div><div class="ch-chk">✓</div></div>
+          <div class="ch-card" onclick="pick(this,&#39;type&#39;,&#39;enfant&#39;)"><div class="ch-ico">🎨</div><div><div class="ch-lbl">Livre illustré enfant</div><div class="ch-dsc">Moins de 7 ans · couleur, visages personnalisés</div></div><div class="ch-chk">✓</div></div>
+        </div>
+      </div>
+
+      <!-- S2 AGE -->
+      <div class="mstep" id="s2">
+        <div class="st-title">Pour quel âge ?</div>
+        <div class="st-sub">Cela adapte le style et le vocabulaire du livre.</div>
+        <div class="choices" id="ageChoices"></div>
+      </div>
+
+      <!-- S3 THEME -->
+      <div class="mstep" id="s3">
+        <div class="st-title">Quel thème ?</div>
+        <div class="st-sub">L'univers de votre histoire.</div>
+        <div class="theme-grid">
+          <div class="th-card" onclick="pickTheme(this,&#39;aventure&#39;)"><div class="th-emo">🗺️</div><div class="th-nm">Aventure</div></div>
+          <div class="th-card" onclick="pickTheme(this,&#39;policier&#39;)"><div class="th-emo">🔍</div><div class="th-nm">Policier</div></div>
+          <div class="th-card" onclick="pickTheme(this,&#39;humour&#39;)"><div class="th-emo">😂</div><div class="th-nm">Humour</div></div>
+          <div class="th-card" onclick="pickTheme(this,&#39;histoire&#39;)"><div class="th-emo">⚔️</div><div class="th-nm">Histoire</div></div>
+          <div class="th-card" onclick="pickTheme(this,&#39;animaux&#39;)"><div class="th-emo">🐾</div><div class="th-nm">Animaux</div></div>
+        </div>
+      </div>
+
+      <!-- S4 PERSONNAGES -->
+      <div class="mstep" id="s4">
+        <div class="st-title">Les personnages</div>
+        <div class="st-sub">Tous les personnages sont inclus, max 8 au total.</div>
+        <div class="perso-slots" id="persoSlots"></div>
+        <button class="perso-add" id="persoAddBtn" onclick="addPerso()">+ Ajouter un personnage (gratuit)</button>
+        <div class="perso-note" id="persoNote"></div>
+      </div>
+
+      <!-- S5 PHOTOS (enfant uniquement) -->
+      <div class="mstep" id="s5">
+        <div class="st-title">Photos des personnages</div>
+        <div class="st-sub">Pour dessiner les visages en style dessin animé.</div>
+        <div class="photo-zone" onclick="document.getElementById(&#39;photoInput&#39;).click()">
+          <div class="photo-ico">📷</div>
+          <div class="photo-lbl">Cliquez pour ajouter des photos</div>
+          <div class="photo-sub">JPG, PNG · une photo par personnage idéalement</div>
+        </div>
+        <input type="file" id="photoInput" accept="image/*" multiple="" style="display:none" onchange="handlePhotos(event)">
+        <div class="photo-previews" id="photoPreviews"></div>
+        <div class="photo-note">💡 Plus la photo est nette, meilleure sera l'illustration.</div>
+      </div>
+
+      <!-- S6 HISTOIRE -->
+      <div class="mstep" id="s6">
+        <div class="st-title">L'histoire</div>
+        <div class="st-sub">Donnez-nous une idée ou laissez-nous tout inventer !</div>
+        <div class="hist-choice">
+          <div class="hist-card" onclick="pickHist(this,&#39;nous&#39;)"><div class="hist-ico">✨</div><div class="hist-lbl">Laissez-nous inventer</div><div class="hist-sub">Nous créons une surprise avec nos outils</div></div>
+          <div class="hist-card" onclick="pickHist(this,&#39;resume&#39;)"><div class="hist-ico">✍️</div><div class="hist-lbl">Je donne une idée</div><div class="hist-sub">Quelques lignes suffisent</div></div>
+        </div>
+        <div style="font-size:12px;color:var(--ink-muted);background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:8px;padding:10px 14px;margin:12px 0;line-height:1.6">Nous n'acceptons pas les histoires à caractère amoureux, à tournure religieuse ou fantastique.</div>
+        <textarea class="hist-ta" id="histTa" placeholder="Ex : Lucas enquête sur la disparition mystérieuse du vélo de son meilleur ami..."></textarea>
+      </div>
+
+      <!-- S7 PAGES -->
+      <div class="mstep" id="s7">
+        <div class="st-title">Nombre de pages</div>
+        <div class="st-sub" id="pagesSub">De 20 à 200 pages. Plus de pages, histoire plus riche.</div>
+        <div class="pages-disp">
+          <div class="pages-num" id="pagesNum">50</div>
+          <div class="pages-lbl">pages</div>
+        </div>
+        <input type="range" class="pages-slider" id="pagesSlider" min="20" max="200" step="10" value="50" oninput="updPages(this.value)">
+        <div class="pages-marks" id="pagesMarks"><span>20</span><span>50</span><span>100</span><span>150</span><span>200</span></div>
+      </div>
+
+      <!-- S7b NIVEAU LANGUE -->
+      <div class="mstep" id="s7b">
+        <div class="st-title">Niveau de langue</div>
+        <div class="st-sub">Adapte le vocabulaire et le style du roman.</div>
+        <div class="choices">
+          <div class="ch-card" onclick="pickNiveau(this,&#39;Facile&#39;)"><div class="ch-ico">🟢</div><div><div class="ch-lbl">Facile</div><div class="ch-dsc">7 à 10 ans · phrases courtes, vocabulaire simple</div></div><div class="ch-chk">✓</div></div>
+          <div class="ch-card" onclick="pickNiveau(this,&#39;Moyen&#39;)"><div class="ch-ico">🟡</div><div><div class="ch-lbl">Moyen</div><div class="ch-dsc">10 à 14 ans · style narratif, vocabulaire enrichi</div></div><div class="ch-chk">✓</div></div>
+          <div class="ch-card" onclick="pickNiveau(this,&#39;Adulte&#39;)"><div class="ch-ico">🔵</div><div><div class="ch-lbl">Adulte</div><div class="ch-dsc">14 ans et plus · style littéraire, nuancé</div></div><div class="ch-chk">✓</div></div>
+        </div>
+      </div>
+
+      <!-- S8 FORMAT + LIVRAISON -->
+      <div class="mstep" id="s8">
+        <div class="st-title">Format &amp; livraison</div>
+        <div class="st-sub">Comment souhaitez-vous recevoir votre livre ?</div>
+        <div class="fmt-cards">
+          <div class="fmt-card" onclick="pickFmt(this,&#39;pdf&#39;)"><div class="fmt-ico">📄</div><div class="fmt-info"><div class="fmt-name">PDF par email</div><div class="fmt-desc">Reçu par email · pas de délai de livraison</div></div><div class="ch-chk">✓</div></div>
+          <div class="fmt-card" onclick="pickFmt(this,&#39;physique&#39;)"><div class="fmt-ico">📦</div><div class="fmt-info"><div class="fmt-name">Livre physique</div><div class="fmt-desc">Broché collé, livré à votre adresse</div></div><div class="ch-chk">✓</div></div>
+        </div>
+        <div id="livraisonSec" style="display:none">
+          <div style="font-size:13px;font-weight:500;color:var(--ink-soft);margin-top:1.25rem;margin-bottom:8px;">Mode de livraison</div>
+          <div class="lv-cards">
+            <div class="lv-card sel" onclick="pickLv(this,&#39;standard&#39;)"><div class="lv-ico">📦</div><div class="lv-info"><div class="lv-name">Standard</div><div class="lv-time">~14 jours · livraison incluse dans le prix</div></div><div class="lv-price">Incluse</div><div class="ch-chk">✓</div></div>
+
+          </div>
+          <div style="font-size:13px;font-weight:500;color:var(--ink-soft);margin-top:1rem;margin-bottom:4px;">Pays de livraison</div>
+          <select class="country-sel" id="countrySel" onchange="updLvPrices()">
+            <option value="">Choisir le pays...</option>
+            <option value="de">🇩🇪 Allemagne</option>
+            <option value="uk">🇬🇧 Angleterre</option>
+            <option value="es">🇪🇸 Espagne</option>
+            <option value="us">🇺🇸 États-Unis</option>
+            <option value="fr">🇫🇷 France</option>
+            <option value="ma">🇲🇦 Maroc</option>
+            <option value="pt">🇵🇹 Portugal</option>
+            <option value="ch">🇨🇭 Suisse</option>
+            <option value="other">🌍 Autre pays</option>
+          </select>
+          <div id="autrePaysMsgLv" style="display:none;margin-top:10px;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.3);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--ink-soft);line-height:1.6;">
+            📬 Pour les autres pays, contactez-nous à <strong><a href="mailto:personnalivre@outlook.fr" style="color:var(--gold-dark)">personnalivre@outlook.fr</a></strong> — nous vous répondrons rapidement.
+          </div>
+        </div>
+      </div>
+
+      <!-- S9 INFOS CLIENT -->
+      <div class="mstep" id="s9">
+        <div class="st-title">Vos informations</div>
+        <div class="st-sub">Pour vous envoyer votre livre et votre confirmation.</div>
+        <div class="form-grid">
+          <div class="fg" id="fg-prenom"><label class="fg-lbl">Prénom</label><input class="fg-input" id="cPrenom" placeholder="Votre prénom"><span class="fg-err">Champ requis</span></div>
+          <div class="fg" id="fg-nom"><label class="fg-lbl">Nom</label><input class="fg-input" id="cNom" placeholder="Votre nom"><span class="fg-err">Champ requis</span></div>
+          <div class="fg full" id="fg-email"><label class="fg-lbl">Email</label><input class="fg-input" id="cEmail" type="email" placeholder="votre@email.com"><span class="fg-err">Email invalide</span></div>
+          <div class="fg full" id="fg-phone"><label class="fg-lbl">Téléphone</label>
+            <div class="wa-note" style="margin-bottom:6px">📱 Fonctionne sur WhatsApp</div>
+            <div style="display:flex;gap:8px;">
+              <input class="fg-input" id="cPhoneCode" placeholder="+212" type="tel" style="width:90px;flex-shrink:0;text-align:center;font-weight:600;">
+              <input class="fg-input" id="cPhone" placeholder="6 12 34 56 78" type="tel" style="flex:1;">
+            </div>
+            <span class="fg-err">Champ requis</span>
+          </div>
+          <div class="fg full" id="fg-adresse" style="display:none"><label class="fg-lbl">Adresse</label><input class="fg-input" id="cAdresse" placeholder="Numéro et rue"><span class="fg-err">Champ requis</span></div>
+          <div class="fg" id="fg-cp" style="display:none"><label class="fg-lbl">Code postal</label><input class="fg-input" id="cCP" placeholder="75001"><span class="fg-err">Champ requis</span></div>
+          <div class="fg" id="fg-ville" style="display:none"><label class="fg-lbl">Ville</label><input class="fg-input" id="cVille" placeholder="Paris"><span class="fg-err">Champ requis</span></div>
+        </div>
+      </div>
+
+      <!-- RECAP + PAIEMENT -->
+      <div class="mstep" id="sRecap">
+        <div class="st-title">Récapitulatif</div>
+        <div class="st-sub">Vérifiez votre commande.</div>
+        <div class="recap-box">
+          <div class="recap-ttl">Détails de la commande</div>
+          <div id="recapRows"></div>
+        </div>
+        <div class="total-block">
+          <div class="total-lbl">Total à payer</div>
+          <div class="total-price" id="recapTot">—</div>
+        </div>
+        <button class="btn-payer" onclick="submitOrder()">Payer →</button>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="mstep" id="sSuccess">
+        <div style="text-align:center;padding:2rem 0">
+          <div style="font-size:60px;margin-bottom:1rem">🎉</div>
+          <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:26px;color:var(--ink);margin-bottom:8px">Commande reçue !</div>
+          <div style="font-size:14px;color:var(--ink-soft);line-height:1.7;max-width:360px;margin:0 auto">Merci ! Nous avons bien reçu votre commande et nous démarrons votre livre.</div>
+        </div>
+      </div>
+
+    </div><!-- /m-body -->
+
+    <div class="m-foot" id="mFoot">
+      <button class="btn-back" id="btnBack" onclick="prevStep()" style="visibility:hidden">← Retour</button>
+      <span class="step-ctr" id="stepCtr">1 / 11</span>
+      <button class="btn-next" id="btnNext" onclick="nextStep()">Continuer →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const S={type:null,age:null,theme:null,persos:[],persoRoles:[],histoire:null,histText:'',photos:[],pages:50,format:null,livraison:'standard',pays:null,prenom:'',nom:'',email:'',phoneCode:'+212',phone:'',adresse:'',cp:'',ville:'',niveau:null};
+const STEPS=['s1','s2','s3','s4','s5','s6','s7','s7b','s8','s9','sRecap'];
+let cur=0,persoCount=0;
+
+
+const CNAMES={ma:'Maroc',fr:'France',ch:'Suisse',uk:'Royaume-Uni',us:'États-Unis',de:'Allemagne',es:'Espagne',pt:'Portugal',other:'Autre pays'};
+const LS_LINKS={
+  'enfant-physique':'https://personnalivre.lemonsqueezy.com/checkout/buy/cee33905-3ec7-4909-9c8e-e5b0d68bfd56',
+  'enfant-pdf':'https://personnalivre.lemonsqueezy.com/checkout/buy/64032e36-b61f-452a-b4b4-85a38a3be338',
+  'roman-320-physique':'https://personnalivre.lemonsqueezy.com/checkout/buy/086d45fe-3cb6-40de-823f-6467d6fdd57a',
+  'roman-200-physique':'https://personnalivre.lemonsqueezy.com/checkout/buy/4c82fef5-5fad-43cd-97f9-b268363a1281',
+  'roman-100-physique':'https://personnalivre.lemonsqueezy.com/checkout/buy/7ebb9528-896a-465a-9296-a52528bd9d10',
+  'roman-pdf':'https://personnalivre.lemonsqueezy.com/checkout/buy/65238443-2888-45d1-91e4-73f7afa893ec',
+};
+const TNAMES={aventure:'Aventure',policier:'Policier',humour:'Humour',histoire:'Histoire',animaux:'Animaux'};
+
+function bookPrice(){if(S.type==='enfant')return 39.99;if(S.pages<=100)return 19.99;if(S.pages<=200)return 24.99;return 29.99;}
+function pdfPrice(){return S.type==='enfant'?12.99:7.99;}
+
+function calcTotal(){return S.format==='pdf'?pdfPrice():bookPrice();}
+function fmt(n){return n.toFixed(2).replace('.',',')+' €';}
+
+function openModal(){document.getElementById('overlay').classList.add('active');document.body.style.overflow='hidden';renderProg();}
+function closeModal(){document.getElementById('overlay').classList.remove('active');document.body.style.overflow='';}
+function closeOnOverlay(e){if(e.target===document.getElementById('overlay'))closeModal();}
+
+function renderProg(){
+  const tot=STEPS.length;
+  const track=document.getElementById('progTrack');
+  track.innerHTML='';
+  for(let i=0;i<tot;i++){const d=document.createElement('div');d.className='prog-seg'+(i<cur?' done':i===cur?' active':'');track.appendChild(d);}
+  document.getElementById('progLbl').textContent='Étape '+(cur+1)+' sur '+tot;
+  document.getElementById('stepCtr').textContent=(cur+1)+' / '+tot;
+}
+
+function showStep(idx){
+  STEPS.forEach((id,i)=>{const el=document.getElementById(id);if(el)el.classList.toggle('active',i===idx);});
+  document.getElementById('btnBack').style.visibility=idx>0?'visible':'hidden';
+  const nb=document.getElementById('btnNext');
+  const mf=document.getElementById('mFoot');
+  if(STEPS[idx]==='sRecap'||STEPS[idx]==='sSuccess'){mf.style.display='none';}
+  else{mf.style.display='flex';nb.textContent='Continuer →';nb.onclick=nextStep;}
+  document.querySelector('.m-body').scrollTop=0;
+  renderProg();
+  if(STEPS[idx]==='s9'){const show=S.format==='physique';['fg-adresse','fg-cp','fg-ville'].forEach(id=>document.getElementById(id).style.display=show?'block':'none');}
+  if(STEPS[idx]==='s4')initPersos();
+  if(STEPS[idx]==='s7')setupSlider();
+  if(STEPS[idx]==='sRecap')buildRecap();
+}
+
+function nextStep(){
+  if(!validate())return;
+  cur++;
+  if(STEPS[cur]==='s5'&&S.type==='roman')cur++;
+  if(STEPS[cur]==='s2'&&S.type==='enfant'){S.age='Moins de 7 ans';cur++;}
+  if(STEPS[cur]==='s7b'&&S.type==='enfant')cur++;
+  showStep(cur);
+}
+function prevStep(){
+  if(cur===0)return;
+  cur--;
+  if(STEPS[cur]==='s5'&&S.type==='roman')cur--;
+  if(STEPS[cur]==='s2'&&S.type==='enfant')cur--;
+  if(STEPS[cur]==='s7b'&&S.type==='enfant')cur--;
+  showStep(cur);
+}
+
+function validate(){
+  const id=STEPS[cur];
+  if(id==='s1'&&!S.type){alert('Choisissez un type de livre.');return false;}
+  if(id==='s2'&&!S.age){alert('Choisissez une tranche d\'âge.');return false;}
+  if(id==='s3'&&!S.theme){alert('Choisissez un thème.');return false;}
+  if(id==='s4'){collectPersos();if(S.persos.length===0){alert('Entrez au moins un nom de personnage.');return false;}}
+  if(id==='s6'){if(!S.histoire){alert('Choisissez une option pour l\'histoire.');return false;}if(S.histoire==='resume')S.histText=document.getElementById('histTa').value.trim();}
+  if(id==='s7b'&&S.type==='roman'&&!S.niveau){alert('Choisissez un niveau de langue.');return false;}
+  if(id==='s8'){if(!S.format){alert('Choisissez un format.');return false;}if(S.format==='physique'&&!S.pays){alert('Choisissez votre pays de livraison.');return false;}}
+  if(id==='s9')return validateForm();
+  return true;
+}
+
+function validateForm(){
+  let ok=true;
+  const p=document.getElementById('cPrenom').value.trim();
+  const n=document.getElementById('cNom').value.trim();
+  const e=document.getElementById('cEmail').value.trim();
+  const re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  document.getElementById('fg-prenom').classList.toggle('err',!p);
+  document.getElementById('fg-nom').classList.toggle('err',!n);
+  document.getElementById('fg-email').classList.toggle('err',!re.test(e));
+  if(!p||!n||!re.test(e))ok=false;
+  if(S.format==='physique'){
+    const a=document.getElementById('cAdresse').value.trim();
+    const c=document.getElementById('cCP').value.trim();
+    const v=document.getElementById('cVille').value.trim();
+    document.getElementById('fg-adresse').classList.toggle('err',!a);
+    document.getElementById('fg-cp').classList.toggle('err',!c);
+    document.getElementById('fg-ville').classList.toggle('err',!v);
+    if(!a||!c||!v)ok=false;
+    if(ok){S.adresse=a;S.cp=c;S.ville=v;}
+  }
+  const phCode=document.getElementById('cPhoneCode').value.trim();const ph=document.getElementById('cPhone').value.trim();
+  document.getElementById('fg-phone').classList.toggle('err',!ph);
+  if(!ph)ok=false;
+  if(ok){S.prenom=p;S.nom=n;S.email=e;S.phone=(phCode?phCode+' ':'')+ph;}
+  return ok;
+}
+
+function pick(el,key,val){el.closest('.choices').querySelectorAll('.ch-card').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');S[key]=val;if(key==='type')buildAgeChoices();}
+function pickTheme(el,val){document.querySelectorAll('.th-card').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');S.theme=val;}
+function pickHist(el,val){document.querySelectorAll('.hist-card').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');S.histoire=val;document.getElementById('histTa').classList.toggle('vis',val==='resume');}
+function pickFmt(el,val){document.querySelectorAll('.fmt-card').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');S.format=val;document.getElementById('livraisonSec').style.display=val==='physique'?'block':'none';if(val!=='physique'){S.livraison=null;S.pays=null;}}
+function pickLv(el,val){document.querySelectorAll('.lv-card').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');S.livraison=val;}
+
+function buildAgeChoices(){
+  const el=document.getElementById('ageChoices');
+  const ages=S.type==='roman'?[{v:'7-12',l:'7 à 12 ans',i:'🧒'},{v:'13-17',l:'13 à 17 ans',i:'🧑'},{v:'18+',l:'Adulte (18+)',i:'👤'}]:[{v:'3-4',l:'3 à 4 ans',i:'👶'},{v:'5-6',l:'5 à 6 ans',i:'🧒'}];
+  el.innerHTML=ages.map(a=>`<div class="ch-card" onclick="pickAge(this,'${a.v}')"><div class="ch-ico">${a.i}</div><div><div class="ch-lbl">${a.l}</div></div><div class="ch-chk">✓</div></div>`).join('');
+}
+function pickAge(el,val){el.closest('.choices').querySelectorAll('.ch-card').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');S.age=val;}
+
+function initPersos(){if(persoCount===0)persoCount=1;renderPersos();}
+function renderPersos(){
+  const c=document.getElementById('persoSlots');c.innerHTML='';
+  for(let i=0;i<persoCount;i++){
+    const div=document.createElement('div');div.className='perso-slot';
+    div.innerHTML=`<div class="perso-num">${i+1}</div><input class="perso-input" id="perso${i}" placeholder="Prénom du personnage ${i+1}" value="${S.persos[i]||''}" style="flex:1"><input class="perso-input" id="persoRole${i}" placeholder="Rôle (ex: frère de Luca)" value="${S.persoRoles&&S.persoRoles[i]||''}" style="flex:1;font-size:12px">${i>0?`<button class="perso-rm" onclick="removePerso(${i})">✕</button>`:''}`;
+    c.appendChild(div);
+  }
+  document.getElementById('persoAddBtn').style.display=persoCount>=8?'none':'flex';
+  document.getElementById('persoAddBtn').textContent='+ Ajouter un personnage (gratuit)';
+  const extra=Math.max(0,persoCount-4);
+  document.getElementById('persoNote').textContent='';
+}
+function addPerso(){if(persoCount>=8)return;collectPersos();persoCount++;if(S.persos.length<persoCount)S.persos.push('');renderPersos();}
+function removePerso(idx){collectPersos();S.persos.splice(idx,1);persoCount--;renderPersos();}
+function pickNiveau(el,val){el.closest('.choices').querySelectorAll('.ch-card').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');S.niveau=val;}
+function collectPersos(){S.persos=[];S.persoRoles=[];for(let i=0;i<persoCount;i++){const el=document.getElementById('perso'+i);const roleEl=document.getElementById('persoRole'+i);if(el)S.persos.push(el.value.trim());if(roleEl)S.persoRoles.push(roleEl.value.trim());}S.persos=S.persos.filter(p=>p);}
+
+function handlePhotos(e){Array.from(e.target.files).forEach(f=>{const r=new FileReader();r.onload=ev=>{S.photos.push({name:f.name,data:ev.target.result});renderPreviews();};r.readAsDataURL(f);});}
+function renderPreviews(){document.getElementById('photoPreviews').innerHTML=S.photos.map((p,i)=>`<div class="photo-thumb"><img src="${p.data}"><button onclick="removePhoto(${i})">✕</button></div>`).join('');}
+function removePhoto(i){S.photos.splice(i,1);renderPreviews();}
+
+function setupSlider(){
+  const sl=document.getElementById('pagesSlider');
+  if(S.type==='enfant'){sl.max=40;sl.step=4;if(parseInt(sl.value)>40)sl.value=40;document.getElementById('pagesMarks').innerHTML='<span>20</span><span>24</span><span>28</span><span>32</span><span>36</span><span>40</span>';document.getElementById('pagesSub').textContent='De 20 à 40 pages pour le livre illustré enfant.';}
+  else{sl.max=320;sl.step=10;document.getElementById('pagesMarks').innerHTML='<span>20</span><span>50</span><span>100</span><span>150</span><span>200</span><span>250</span><span>320</span>';document.getElementById('pagesSub').textContent='De 20 à 320 pages. Plus de pages, histoire plus riche.';}
+  S.pages=parseInt(sl.value);document.getElementById('pagesNum').textContent=sl.value;
+}
+function updPages(v){S.pages=parseInt(v);document.getElementById('pagesNum').textContent=v;}
+
+function updLvPrices(){
+  S.pays=document.getElementById('countrySel').value;
+  document.getElementById('autrePaysMsgLv').style.display=S.pays==='other'?'block':'none';
+}
+
+function buildRecap(){
+  collectPersos();
+  const persos=S.persos.filter(p=>p);
+  const basePrice=S.format==='pdf'?pdfPrice():bookPrice();
+  const typeLabel=S.type==='roman'?'Roman personnalisé':'Livre illustré enfant';
+  const fmtLabel=S.format==='pdf'?'PDF par email':'Livre physique';
+  const lvLabel=S.livraison==='standard'?'Standard (~2 sem.)':'Express (~1 sem.)';
+
+  let rows=[
+    ['Type',typeLabel],['Âge',S.age||'—'],['Thème',TNAMES[S.theme]||'—'],
+    ['Personnages',persos.join(', ')||'—'],
+    ['Histoire',S.histoire==='nous'?'Nous inventons':S.histText||'—'],
+    ['Pages',S.pages+' pages'],['Format',fmtLabel],
+  ];
+  if(S.format==='physique'){rows.push(['Livraison',lvLabel]);rows.push(['Pays',CNAMES[S.pays]||'—']);rows.push(['Adresse',S.adresse+', '+S.cp+' '+S.ville]);}
+  rows.push(['Client',S.prenom+' '+S.nom]);
+  rows.push(['Email',S.email]);
+  if(S.phone)rows.push(['Téléphone',S.phoneCode+' '+S.phone]);
+  if(S.niveau)rows.push(['Niveau de langue',S.niveau]);
+
+  let priceRows=`<hr class="recap-sep"><div class="recap-row"><span class="recap-k">Prix livre (${S.pages}p)</span><span class="recap-v">${fmt(basePrice)}</span></div>`;
+  if(S.format==='physique')priceRows+=`<div class="recap-row"><span class="recap-k">Livraison standard</span><span class="recap-v">Incluse</span></div>`;
+
+  document.getElementById('recapRows').innerHTML=rows.map(([k,v])=>`<div class="recap-row"><span class="recap-k">${k}</span><span class="recap-v">${v}</span></div>`).join('')+priceRows;
+  document.getElementById('recapTot').textContent=fmt(calcTotal());
+}
+
+// Init EmailJS
+emailjs.init('Eh9CgMWVxAjwfKidb');
+
+function getLSLink(){
+  if(S.type==='enfant') return S.format==='pdf'?LS_LINKS['enfant-pdf']:LS_LINKS['enfant-physique'];
+  if(S.format==='pdf') return LS_LINKS['roman-pdf'];
+  if(S.pages<=100) return LS_LINKS['roman-100-physique'];
+  if(S.pages<=200) return LS_LINKS['roman-200-physique'];
+  return LS_LINKS['roman-320-physique'];
+}
+
+function submitOrder(){
+  collectPersos();
+  const nomComplet=(S.prenom+' '+S.nom).trim();
+  const adresseComplete=S.adresse?(S.adresse+', '+S.cp+' '+S.ville):'—';
+  const photosInfo=S.photos.length>0?S.photos.length+' photo(s) : '+S.photos.map(p=>p.name).join(', '):'Aucune photo';
+  const total=calcTotal();
+
+  const templateParams={
+    nom:nomComplet,
+    email:S.email||'—',
+    telephone:S.phone||'—',
+    type:S.type==='enfant'?'Livre enfant illustré':'Roman',
+    theme:S.theme||'—',
+    pages:S.pages+' pages',
+    format:S.format==='pdf'?'PDF':'Livre physique',
+    niveau_langue:S.niveau||'—',
+    personnages:S.persos.join(', ')||'—',
+    roles_persos:S.persoRoles&&S.persoRoles.filter(r=>r).length>0?S.persoRoles.join(', '):'—',
+    histoire:S.histoire==='nous'?'Vous inventez':S.histText||'—',
+    pays:CNAMES[S.pays]||'—',
+    adresse:adresseComplete,
+    photos:photosInfo,
+    total:total.toFixed(2).replace('.',',')+' €',
+    date:new Date().toLocaleString('fr-FR'),
+  };
+
+  emailjs.send('service_y7l1qbo','template_lbzve6l',templateParams)
+    .then(()=>console.log('Email envoyé !'))
+    .catch(err=>console.error('Erreur email:',err));
+
+  if(S.pays==='other'){
+    window.location.href='mailto:personnalivre@outlook.fr?subject=Commande - Autre pays&body='+encodeURIComponent('Nom: '+nomComplet+' | Email: '+S.email);
+    return;
+  }
+  const link=getLSLink();
+  const params=new URLSearchParams({'checkout[email]':S.email||'','checkout[name]':nomComplet});
+  window.location.href=link+'?'+params.toString();
+}
+
+renderProg();
+
+function openFP(id){document.getElementById(id).classList.add('active');document.body.style.overflow='hidden';}
+function closeFP(id){document.getElementById(id).classList.remove('active');document.body.style.overflow='';}
+function closeFPOverlay(e,id){if(e.target===document.getElementById(id))closeFP(id);}
+</script>
+
+
+</body></html>
