@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM3YzVjYmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDI4OGQxIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIyIiBmaWxsPSJ1cmwoI2cpIi8+CiAgPHRleHQgeD0iNTAiIHk9IjcyIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSI2MiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MPC90ZXh0Pgo8L3N2Zz4=">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luminis – Les histoires qui font aimer apprendre</title>
+<meta name="description" content="68 histoires éducatives pour les enfants de 4 à 12 ans. Lecture, audio et quiz pour apprendre en s'amusant. Essayez 2 histoires gratuites, sans compte.">
+<meta property="og:title" content="Luminis – Les histoires qui font aimer apprendre">
+<meta property="og:description" content="68 histoires éducatives pour les 4-12 ans. Lecture, audio et quiz. Démo gratuite sans compte.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://luminiseducation.com/">
+<meta property="og:image" content="https://luminiseducation.com/apercu-lecture.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--purple:#7c5cbf;--purple-light:#f0eef8;--purple-dark:#5a3d9a;--ink:#1a1a2e;--ink-mid:#4a4a6a;--ink-soft:#9090aa;--bg:#fdfcf8;--white:#fff;--radius:20px;--radius-sm:12px;--shadow:0 4px 20px rgba(0,0,0,.07);--shadow-h:0 8px 32px rgba(0,0,0,.13)}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+nav{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #ede9e0;padding:0 3rem;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.05)}
+.logo{font-family:"Baloo 2",cursive;font-size:1.7rem;font-weight:800;color:var(--ink);text-decoration:none}
+.logo span{color:var(--purple)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--ink-mid);font-weight:700;font-size:.95rem}
+.nav-links a:hover{color:var(--purple)}
+.nav-btns{display:flex;gap:.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:"Nunito",sans-serif;font-weight:800;font-size:1rem;padding:.7rem 1.6rem;border-radius:50px;border:none;cursor:pointer;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--purple);color:white}
+.btn-outline{background:transparent;color:var(--ink);border:2px solid #d8d3c8}
+.btn-outline:hover{border-color:var(--purple);color:var(--purple)}
+.btn-lg{font-size:1.15rem;padding:.95rem 2.4rem}
+.btn-white{background:white;color:var(--purple)}
+.hero{text-align:center;padding:7rem 3rem 5rem;max-width:860px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff9e6;color:#7a5800;font-weight:800;font-size:.82rem;padding:7px 18px;border-radius:50px;border:1px solid #f5d87a;margin-bottom:1.8rem}
+.hero h1{font-family:"Baloo 2",cursive;font-size:3.8rem;font-weight:800;line-height:1.1;color:var(--ink);margin-bottom:1.4rem}
+.hero h1 span{color:var(--purple)}
+.hero-sub{font-size:1.15rem;color:var(--ink-mid);line-height:1.8;margin-bottom:2.5rem;max-width:620px;margin-left:auto;margin-right:auto}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.section{padding:5rem 3rem}
+.section.white{background:white}
+.section-header{text-align:center;margin-bottom:3.5rem}
+.section-label{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--purple);margin-bottom:.6rem}
+.section-title{font-family:"Baloo 2",cursive;font-size:2.3rem;font-weight:800;color:var(--ink);margin-bottom:.8rem;line-height:1.2}
+.section-sub{font-size:1rem;color:var(--ink-mid);line-height:1.75;max-width:560px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.why-card{background:var(--bg);border-radius:var(--radius);padding:2rem 1.5rem;border:1.5px solid #ede9e0}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-h)}
+.why-icon{font-size:2.5rem;margin-bottom:1rem}
+.why-card h3{font-family:"Baloo 2",cursive;font-size:1.1rem;font-weight:800;color:var(--ink);margin-bottom:.5rem}
+.why-card p{font-size:.9rem;color:var(--ink-mid);line-height:1.65}
+.themes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.theme-pill{background:white;border-radius:var(--radius);padding:1.4rem 1.2rem;border:1.5px solid #ede9e0;display:flex;flex-direction:column;align-items:flex-start;gap:.5rem}
+.theme-pill:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.tp-emoji{font-size:2rem}
+.theme-pill h3{font-family:"Baloo 2",cursive;font-size:.95rem;font-weight:800;color:var(--ink)}
+.theme-pill span{font-size:.78rem;font-weight:700;color:var(--ink-soft)}
+.tp-ferme{border-top:3px solid #4caf50}.tp-fable{border-top:3px solid #9c27b0}
+.tp-savane{border-top:3px solid #ff9800}.tp-civili{border-top:3px solid #795548}
+.tp-geo{border-top:3px solid #3f51b5}.tp-marine{border-top:3px solid #0288d1}
+.tp-perso{border-top:3px solid #607d8b}
+.demo-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:600px;margin:2rem auto}
+.demo-card{background:var(--bg);border-radius:16px;padding:1.5rem;border:1.5px solid #ede9e0;text-align:center}
+.dc-emoji{font-size:2rem;margin-bottom:.5rem}
+.dc-title{font-family:"Baloo 2",cursive;font-weight:800;font-size:.95rem;color:var(--ink);margin-bottom:.3rem}
+.dc-sub{font-size:.75rem;color:var(--ink-soft);font-weight:600;margin-bottom:1rem}
+.btn-demo{display:inline-flex;align-items:center;gap:6px;color:white;padding:8px 16px;border-radius:50px;font-family:"Baloo 2",cursive;font-size:.85rem;font-weight:800;text-decoration:none}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:680px;margin:2.5rem auto 0}
+.price-card{background:white;border-radius:var(--radius);padding:2.5rem 2rem;border:1.5px solid #ede9e0;position:relative}
+.price-card.featured{border:2.5px solid var(--purple)}
+.popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--purple);color:white;font-size:.75rem;font-weight:800;padding:4px 16px;border-radius:50px;white-space:nowrap}
+.price-name{font-family:"Baloo 2",cursive;font-size:1.1rem;font-weight:700;color:var(--ink-mid);margin-bottom:.8rem}
+.price-amount{font-family:"Baloo 2",cursive;font-size:3rem;font-weight:800;color:var(--ink);line-height:1}
+.price-amount span{font-size:1rem;font-weight:600;color:var(--ink-soft)}
+.price-save{display:inline-block;background:#e8f5e9;color:#2e7d32;font-size:.78rem;font-weight:800;padding:3px 10px;border-radius:50px;margin:.5rem 0 1rem}
+.price-desc{font-size:.88rem;color:var(--ink-soft);margin-bottom:1.5rem;line-height:1.5}
+.price-features{list-style:none;margin-bottom:1.8rem}
+.price-features li{display:flex;align-items:flex-start;gap:8px;font-size:.9rem;color:var(--ink-mid);margin-bottom:.6rem}
+.check{color:#22c55e;font-size:1rem;flex-shrink:0}
+.price-note{text-align:center;font-size:.82rem;color:var(--ink-soft);margin-top:1.5rem}
+.cta-dark{background:var(--ink);color:white;text-align:center;padding:5rem 3rem}
+.cta-dark h2{font-family:"Baloo 2",cursive;font-size:2.5rem;font-weight:800;margin-bottom:.8rem}
+.cta-dark p{color:rgba(255,255,255,.65);font-size:1rem;margin-bottom:2.5rem;line-height:1.7}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+footer{background:#111120;color:rgba(255,255,255,.45);text-align:center;padding:2rem;font-size:.82rem}
+footer a{color:rgba(255,255,255,.55);text-decoration:none;margin:0 .8rem}
+footer a:hover{color:white}
+.popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;display:none;align-items:center;justify-content:center;padding:1rem}
+.popup-overlay.open{display:flex}
+.popup-box{background:white;border-radius:var(--radius);padding:2.5rem 2rem;max-width:540px;width:100%;max-height:80vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.18);position:relative}
+.popup-close{position:absolute;top:12px;right:12px;background:#f0eef8;border:none;width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer}
+.popup-box h3{font-family:"Baloo 2",cursive;font-size:1.4rem;font-weight:800;color:var(--ink);margin-bottom:1rem}
+.popup-box p{font-size:.88rem;color:var(--ink-mid);line-height:1.8;margin-bottom:.8rem}
+.new-badge{display:inline-flex;align-items:center;gap:6px;background:#e8f5e9;color:#2e7d32;font-weight:800;font-size:.8rem;padding:5px 12px;border-radius:50px;margin-bottom:1.5rem}
+.shots-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:980px;margin:0 auto}
+.shot-card{background:white;border-radius:var(--radius);border:1.5px solid #ede9e0;overflow:hidden;box-shadow:var(--shadow)}
+.shot-card img{display:block;width:100%;height:auto}
+.shot-caption{padding:1rem 1.3rem;display:flex;align-items:center;gap:10px}
+.shot-caption .sc-emoji{font-size:1.3rem}
+.shot-caption h3{font-family:"Baloo 2",cursive;font-size:.95rem;font-weight:800;color:var(--ink)}
+.shot-caption p{font-size:.8rem;color:var(--ink-soft);font-weight:600}
+.faq-list{max-width:680px;margin:0 auto}
+.faq-item{background:var(--bg);border:1.5px solid #ede9e0;border-radius:var(--radius-sm);margin-bottom:.8rem;overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:1.1rem 1.3rem;font-family:"Baloo 2",cursive;font-weight:800;font-size:.98rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.3rem;color:var(--purple);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item .faq-body{padding:0 1.3rem 1.2rem;font-size:.9rem;color:var(--ink-mid);line-height:1.7}
+@media(max-width:700px){.shots-grid{grid-template-columns:1fr;max-width:480px}}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}.themes-grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:2.8rem}nav{padding:0 1.5rem}.nav-links{display:none}.section{padding:3rem 1.5rem}}
+@media(max-width:600px){.hero{padding:4rem 1.5rem 3rem}.hero h1{font-size:2.2rem}.why-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr;max-width:360px}.demo-cards{grid-template-columns:1fr}.cta-dark{padding:3rem 1.5rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">Luminis<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#pourquoi">Pourquoi Luminis</a></li>
+    <li><a href="#themes">Thèmes</a></li>
+    <li><a href="#demo">Démo</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-btns">
+    <a href="/app" class="btn btn-outline" style="padding:.5rem 1.2rem;font-size:.9rem;">Se connecter</a>
+    <button onclick="document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" class="btn btn-primary" style="padding:.5rem 1.2rem;font-size:.9rem;">Commencer</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">✨ Nouveau contenu ajouté chaque mois</div>
+  <h1>Les histoires qui font<br><span>aimer apprendre</span></h1>
+  <p class="hero-sub">Luminis propose des histoires enrichissantes pour les enfants de 4 à 12 ans. Chaque histoire combine lecture, audio et quiz pour un apprentissage profond, naturel et amusant.</p>
+  <div class="hero-cta">
+    <a href="/app" class="btn btn-outline btn-lg">Se connecter</a>
+    <button onclick="document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" class="btn btn-primary btn-lg">Commencer →</button>
+  </div>
+</div>
+
+<div class="section white" id="pourquoi">
+  <div class="section-header">
+    <div class="section-label">Pourquoi Luminis</div>
+    <h2 class="section-title" style="font-size:2.8rem;">Ce que votre enfant va apprendre</h2>
+    <p class="section-sub">Un outil éducatif complet qui développe la lecture, l'écoute et la compréhension.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-icon">📖</div><h3>Lire avec plaisir</h3><p>Des textes adaptés à l'âge de l'enfant, progressifs du plus facile au plus difficile.</p></div>
+    <div class="why-card"><div class="why-icon">🎧</div><h3>Développer l'écoute</h3><p>Le mode audio aide les enfants à mieux comprendre et enrichir leur vocabulaire naturellement.</p></div>
+    <div class="why-card"><div class="why-icon">🧠</div><h3>Comprendre et retenir</h3><p>Le quiz après chaque histoire teste la compréhension. L'enfant retient 3x plus ce qu'il apprend.</p></div>
+    <div class="why-card"><div class="why-icon">🌍</div><h3>Ouvrir au monde</h3><p>8 thèmes variés — animaux, civilisations, géographie — qui éveillent la curiosité.</p></div>
+    <div class="why-card"><div class="why-icon">📊</div><h3>Suivre la progression</h3><p>Les histoires terminées et la progression par thème sont sauvegardées automatiquement.</p></div>
+    <div class="why-card"><div class="why-icon">🔒</div><h3>Un espace sécurisé</h3><p>Chaque enfant a son propre compte protégé. Aucun contenu inapproprié, aucune publicité.</p></div>
+  </div>
+</div>
+
+<div class="section" id="apercu">
+  <div class="section-header">
+    <div class="section-label">Aperçu</div>
+    <h2 class="section-title">Luminis en images</h2>
+    <p class="section-sub">Voici exactement ce que votre enfant verra : des histoires illustrées, un mode audio et un quiz à la fin de chaque histoire.</p>
+  </div>
+  <div class="shots-grid">
+    <div class="shot-card"><img src="apercu-lecture.jpg" alt="Une histoire Luminis en mode lecture : Les requins, avec texte illustré et bouton audio" loading="lazy"><div class="shot-caption"><span class="sc-emoji">📖</span><div><h3>La lecture</h3><p>Textes illustrés, adaptés à l'âge de l'enfant</p></div></div></div>
+    <div class="shot-card"><img src="apercu-quiz.jpg" alt="Le quiz de compréhension à la fin d'une histoire Luminis" loading="lazy"><div class="shot-caption"><span class="sc-emoji">🧠</span><div><h3>Le quiz</h3><p>Des questions après chaque histoire pour retenir</p></div></div></div>
+    <div class="shot-card"><img src="apercu-accueil.jpg" alt="L'espace enfant Luminis avec les 8 thèmes et la progression" loading="lazy"><div class="shot-caption"><span class="sc-emoji">📊</span><div><h3>L'espace enfant</h3><p>8 thèmes et une progression sauvegardée</p></div></div></div>
+    <div class="shot-card"><img src="apercu-theme.jpg" alt="Un thème Luminis : Les Animaux de la Ferme, 10 histoires triées par difficulté" loading="lazy"><div class="shot-caption"><span class="sc-emoji">🐄</span><div><h3>Les thèmes</h3><p>Histoires triées du plus facile au plus difficile</p></div></div></div>
+  </div>
+</div>
+
+<div class="section" id="themes">
+  <div class="section-header">
+    <div class="new-badge">🟢 Nouveau contenu ajouté chaque mois</div>
+    <div class="section-label">Les thèmes</div>
+    <h2 class="section-title">68 histoires à explorer</h2>
+    <p class="section-sub">8 univers variés triés du plus facile au plus difficile.</p>
+  </div>
+  <div class="themes-grid">
+    <div class="theme-pill tp-ferme"><span class="tp-emoji">🐄</span><h3>Les Animaux de la Ferme</h3><span>10 histoires</span></div>
+    <div class="theme-pill tp-fable"><span class="tp-emoji">📜</span><h3>Les Fables</h3><span>10 histoires</span></div>
+    <div class="theme-pill tp-fable"><span class="tp-emoji">📖</span><h3>Les Contes</h3><span>5 histoires</span></div>
+    <div class="theme-pill tp-savane"><span class="tp-emoji">🦒</span><h3>Les Animaux de la Savane</h3><span>10 histoires</span></div>
+    <div class="theme-pill tp-civili"><span class="tp-emoji">🏛️</span><h3>Les Civilisations Anciennes</h3><span>10 histoires</span></div>
+    <div class="theme-pill tp-geo"><span class="tp-emoji">🌍</span><h3>Géographie & Pays</h3><span>10 histoires</span></div>
+    <div class="theme-pill tp-marine"><span class="tp-emoji">🐋</span><h3>La Vie Marine</h3><span>10 histoires</span></div>
+    <div class="theme-pill tp-perso"><span class="tp-emoji">🔭</span><h3>Personnages Historiques</h3><span>3 histoires</span></div>
+    <div class="theme-pill" style="border:2px dashed #d4cfc5;background:transparent;justify-content:center;align-items:center;text-align:center;"><span style="font-size:1.5rem">＋</span><h3 style="color:var(--ink-soft)">Nouveaux thèmes chaque mois</h3></div>
+  </div>
+</div>
+
+<div class="section white" id="demo">
+  <div class="section-header">
+    <div class="section-label">Exemple en direct</div>
+    <h2 class="section-title">Essayez une histoire gratuite</h2>
+    <p class="section-sub">Découvrez Luminis avec deux exemples — lecture, audio et quiz inclus !</p>
+  </div>
+  <div class="demo-cards">
+    <div class="demo-card"><div class="dc-emoji">🦈</div><div class="dc-title">Les requins</div><div class="dc-sub">La Vie Marine</div><a href="https://view.genially.com/678b07f9d541d92a618d38c6" target="_blank" class="btn-demo" style="background:#0288d1;">▶ Voir l'histoire</a></div>
+    <div class="demo-card"><div class="dc-emoji">🐦</div><div class="dc-title">Le Corbeau et le Renard</div><div class="dc-sub">Les Fables</div><a href="https://view.genially.com/677303c19dadd8baa998dbc1" target="_blank" class="btn-demo" style="background:#9c27b0;">▶ Voir l'histoire</a></div>
+  </div>
+  <p style="text-align:center;font-size:.8rem;color:var(--ink-soft)">S'ouvre dans un nouvel onglet · Gratuit · Aucun compte requis</p>
+</div>
+
+<div class="section" id="tarifs">
+  <div class="section-header">
+    <div class="section-label">Tarifs</div>
+    <h2 class="section-title">Simple et sans surprise</h2>
+    <p class="section-sub">Un abonnement pour accéder à toutes les histoires. Annulez à tout moment.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-name">Mensuel</div>
+      <div class="price-amount">7€ <span>/ mois</span></div>
+      <div class="price-desc" style="margin-top:.8rem">Parfait pour essayer sans engagement.</div>
+      <ul class="price-features" style="margin-top:1.2rem">
+        <li><span class="check">✓</span> Accès aux 68 histoires</li>
+        <li><span class="check">✓</span> Lecture, audio & quiz</li>
+        <li><span class="check">✓</span> Tous les thèmes débloqués</li>
+        <li><span class="check">✓</span> Nouvelles histoires chaque mois</li>
+        <li><span class="check">✓</span> Résiliation à tout moment</li>
+      </ul>
+      <a href="https://luminis-paiement.lemonsqueezy.com/checkout/buy/674c6888-6bf1-4b17-9353-1379a7dd8148" target="_blank" class="btn btn-outline" style="width:100%;border-radius:12px;padding:.85rem;">Choisir le mensuel</a>
+    </div>
+    <div class="price-card featured">
+      <div class="popular-badge">⭐ Meilleure offre</div>
+      <div class="price-name">Annuel</div>
+      <div class="price-amount">50€ <span>/ an</span></div>
+      <div class="price-save">🎉 Économise 34€ — soit 4,16€/mois</div>
+      <div class="price-desc">Le choix des familles : moins de 0,75€ par histoire, et chaque nouveauté incluse toute l'année.</div>
+      <ul class="price-features">
+        <li><span class="check">✓</span> Accès aux 68 histoires</li>
+        <li><span class="check">✓</span> Lecture, audio & quiz</li>
+        <li><span class="check">✓</span> Tous les thèmes débloqués</li>
+        <li><span class="check">✓</span> Nouvelles histoires chaque mois</li>
+        <li><span class="check">✓</span> Accès prioritaire aux nouveautés</li>
+      </ul>
+      <a href="https://luminis-paiement.lemonsqueezy.com/checkout/buy/d025e4d8-6ce0-49b5-80e2-2ecde5b8ad1f" target="_blank" class="btn btn-primary" style="width:100%;border-radius:12px;padding:.85rem;">Choisir l'annuel</a>
+    </div>
+  </div>
+  <p class="price-note">🔒 Paiement sécurisé · Accès immédiat après paiement · Aucun engagement</p>
+</div>
+
+<div class="section white" id="faq">
+  <div class="section-header">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Questions fréquentes</h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>Pour quel âge Luminis est-il adapté ?</summary>
+      <div class="faq-body">Pour les enfants de 4 à 12 ans. Les histoires de chaque thème sont triées du plus facile au plus difficile : les plus jeunes commencent avec le mode audio, les plus grands lisent seuls.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Puis-je essayer avant de payer ?</summary>
+      <div class="faq-body">Oui ! Deux histoires complètes sont disponibles gratuitement dans la section <a href="#demo" style="color:var(--purple);font-weight:700">Démo</a>, avec lecture, audio et quiz — sans compte ni carte bancaire.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Sur quels appareils ça fonctionne ?</summary>
+      <div class="faq-body">Luminis fonctionne directement dans le navigateur, sans installation : ordinateur, tablette ou téléphone. Il suffit de se connecter sur luminiseducation.com.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Comment annuler mon abonnement ?</summary>
+      <div class="faq-body">En quelques clics, à tout moment, depuis le lien de gestion d'abonnement reçu par email après votre paiement. Aucune justification demandée, aucun engagement.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Y a-t-il vraiment du nouveau contenu chaque mois ?</summary>
+      <div class="faq-body">Oui, de nouvelles histoires sont ajoutées chaque mois et sont automatiquement incluses dans votre abonnement, sans coût supplémentaire.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Les histoires sont-elles en français ?</summary>
+      <div class="faq-body">Oui, toutes les histoires sont en français, avec un vocabulaire adapté à l'âge de l'enfant.</div>
+    </details>
+  </div>
+</div>
+
+<div class="cta-dark">
+  <h2>Offrez à votre enfant<br>le goût des histoires ✨</h2>
+  <p>Accès immédiat à 68 histoires · Lecture, audio & quiz<br>Nouveau contenu chaque mois · Annulez à tout moment</p>
+  <div class="cta-btns">
+    <button onclick="document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" class="btn btn-white btn-lg">Commencer maintenant →</button>
+    <a href="#demo" class="btn btn-lg" style="background:rgba(255,255,255,.1);color:white;border:2px solid rgba(255,255,255,.2);">Voir la démo gratuite</a>
+  </div>
+</div>
+
+<footer>
+  <div style="margin-bottom:1rem;">
+    <a href="#" onclick="openPopup('popup-mentions');return false;">Mentions légales</a>
+    <a href="#" onclick="openPopup('popup-cgv');return false;">CGV</a>
+    <a href="#" onclick="openPopup('popup-confidentialite');return false;">Confidentialité</a>
+    <a href="#" onclick="openPopup('popup-contact');return false;">Contact</a>
+  </div>
+  <div>© 2026 Luminis · Tous droits réservés</div>
+</footer>
+
+<div class="popup-overlay" id="popup-contact" onclick="if(event.target===this)closePopup('popup-contact')">
+  <div class="popup-box"><button class="popup-close" onclick="closePopup('popup-contact')">✕</button>
+    <h3>✉️ Nous contacter</h3>
+    <div style="background:#f0eef8;border-radius:12px;padding:1rem;margin-bottom:1rem;display:flex;align-items:center;gap:12px;"><span style="font-size:1.3rem">📧</span><div><div style="font-size:.8rem;font-weight:700;color:#9090aa">Email</div><div style="font-weight:800;color:#7c5cbf">luminis.service@outlook.fr</div></div></div>
+    <a href="https://outlook.live.com/mail/0/deeplink/compose?to=luminis.service@outlook.fr" target="_blank" style="display:flex;align-items:center;justify-content:center;width:100%;padding:.85rem;border-radius:12px;background:#7c5cbf;color:white;font-family:'Baloo 2',cursive;font-size:1rem;font-weight:800;text-decoration:none;">✉️ Nous contacter</a>
+  </div>
+</div>
+<div class="popup-overlay" id="popup-confidentialite" onclick="if(event.target===this)closePopup('popup-confidentialite')">
+  <div class="popup-box"><button class="popup-close" onclick="closePopup('popup-confidentialite')">✕</button>
+    <h3>🔒 Politique de confidentialité</h3>
+    <p><strong>Luminis</strong> s'engage à protéger la vie privée de ses utilisateurs.</p>
+    <p><strong>Données :</strong> Email, mot de passe chiffré, progression pédagogique.</p>
+    <p><strong>Utilisation :</strong> Jamais vendues ni partagées avec des tiers.</p>
+    <p><strong>Sécurité :</strong> Hébergées en Europe, conformément au RGPD.</p>
+  </div>
+</div>
+<div class="popup-overlay" id="popup-cgv" onclick="if(event.target===this)closePopup('popup-cgv')">
+  <div class="popup-box"><button class="popup-close" onclick="closePopup('popup-cgv')">✕</button>
+    <h3>📄 Conditions générales de vente</h3>
+    <p><strong>Objet :</strong> Luminis fournit un accès en ligne à des histoires éducatives pour enfants (lecture, audio, quiz), via un abonnement mensuel ou annuel.</p>
+    <p><strong>Prix :</strong> Abonnement mensuel à 7€/mois ou annuel à 50€/an, toutes taxes comprises. Le paiement est traité de manière sécurisée par notre prestataire Lemon Squeezy.</p>
+    <p><strong>Accès :</strong> L'accès au service est immédiat après confirmation du paiement.</p>
+    <p><strong>Résiliation :</strong> L'abonnement est sans engagement et peut être résilié à tout moment depuis le lien de gestion reçu par email. La résiliation prend effet à la fin de la période en cours, déjà payée.</p>
+    <p><strong>Droit de rétractation :</strong> Conformément à l'article L221-28 du Code de la consommation, en demandant l'accès immédiat au contenu numérique, vous acceptez de renoncer à votre droit de rétractation de 14 jours.</p>
+    <p><strong>Contact :</strong> luminis.service@outlook.fr</p>
+  </div>
+</div>
+<div class="popup-overlay" id="popup-mentions" onclick="if(event.target===this)closePopup('popup-mentions')">
+  <div class="popup-box"><button class="popup-close" onclick="closePopup('popup-mentions')">✕</button>
+    <h3>⚖️ Mentions légales</h3>
+    <p><strong>Éditeur :</strong> Isaac Arokeum — luminis.service@outlook.fr</p>
+    <p><strong>Hébergement :</strong> Vercel Inc., San Francisco, CA, États-Unis.</p>
+    <p><strong>Propriété intellectuelle :</strong> Tous les contenus sont protégés par le droit d'auteur.</p>
+    <p><strong>Données personnelles :</strong> Conformément au RGPD, vous disposez d'un droit d'accès et de suppression.</p>
+  </div>
+</div>
+
+<script>
+function openPopup(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closePopup(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')['popup-contact','popup-confidentialite','popup-mentions','popup-cgv'].forEach(closePopup);});
+</script>
+</body>
+</html>
